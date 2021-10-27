@@ -1,0 +1,53 @@
+import java.util.Random;
+import static java.lang.Math.*;
+public class Main
+{
+	public static void main(String[] args) {
+    	Random rand = new Random();
+    	int n = rand.nextInt(100);
+    	int[] tab = new int[n];
+    	int i;
+    	int min = -1000;
+    	int max = 1000;
+    	for (i=0; i<n; i++)
+    	{
+    		int s = rand.nextInt((max-min)+1) + min;
+    		tab[i] = s;
+    		System.out.print(tab[i] + " "); 
+
+	    }
+	    System.out.print(" \n");
+	    
+        System.out.println("\nTyle dodatnich: "+sumaDodatnich(tab));
+        System.out.println("Tyle ujemnych: "+sumaUjemnych(tab));
+	}
+    public static int sumaUjemnych(int[] tab)
+    {
+        int ujemne = 0;
+        for (int i = 0; i<=tab.length-1; i++)
+        {
+            if(tab[i] < 0)
+            {
+                ujemne +=tab[i];
+            }
+
+        }
+        return ujemne;
+    }
+
+    public static int sumaDodatnich(int[] tab)
+    {
+        int dodatnie = 0;
+        for (int i = 0; i<=tab.length-1; i++)
+        {
+            if(tab[i] > 0)
+            {
+                dodatnie +=tab[i];
+            }
+
+        }
+        return dodatnie;
+    }
+    
+
+}

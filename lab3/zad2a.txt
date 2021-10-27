@@ -1,0 +1,52 @@
+import java.util.Random;
+import static java.lang.Math.*;
+public class Main
+{
+	public static void main(String[] args) 
+	{
+    	Random rand = new Random();
+    	int n = rand.nextInt(100);
+    	int[] tab = new int[n];
+    	int i;
+    	int min = -1000;
+    	int max = 1000;
+    	for (i=0; i<n; i++)
+    	{
+    		int s = rand.nextInt((max-min)+1) + min;
+    		tab[i] = s;
+    		System.out.print(tab[i] + " " + "\n"); 
+    		
+
+	    }
+        System.out.println("Liczb nieparzystych: "+ileNieparzystych(tab));
+        System.out.println("Liczb parzystych: "+ileParzystych(tab));
+        
+	}
+
+     public  static int ileParzystych(int[] tab)
+     {
+        int parzyste = 0;
+        for(int i = 0; i<=tab.length-1;i++)
+        {
+            if(tab[i] %2 == 0)
+            {
+                parzyste++;
+            }
+        }
+        return parzyste;
+    }
+
+    public static int ileNieparzystych(int[] tab)
+    {
+        int nieparzyste = 0;
+        for(int i = 0; i <=tab.length-1; i++)
+        {
+            if(tab[i]%2 != 0)
+            {
+                nieparzyste++;
+            }
+        }
+        return nieparzyste;
+    }
+        
+}
