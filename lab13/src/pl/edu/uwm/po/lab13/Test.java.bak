@@ -10,20 +10,20 @@ public class Test {
         //lista.wypisz();
 
         Egzamin po = new Egzamin();
-        po.dodaj("Patrych", "db");
-        po.dodaj("Albrecht","dbd");
-        po.dodaj("Slaby","dst");
-        po.dodaj("Fons","db+");
+        po.dodaj("Grzegorz", "db");
+        po.dodaj("Kacper","dbd");
+        po.dodaj("Maciek","dst");
+        po.dodaj("Dawid","db+");
         po.wypisz();
-        po.usun("Slaby");
-        po.zmien("Fons","dst+");
+        po.usun("Maciek");
+        po.zmien("Dawid","dst+");
         po.wypisz();
 
         Egzamin2 po2= new Egzamin2();
-        po2.dodaj(new Student("Adrian","Albrecht",4),"bdb");
-        po2.dodaj(new Student("Amadeusz","Albrecht",3),"db");
-        po2.dodaj(new Student("Adrian","Albrecht",1),"dst");
-        po2.dodaj(new Student("Adrian","Paterson",2),"ndst");
+        po2.dodaj(new Student("Kacper","Jasiuczenia",4),"bdb");
+        po2.dodaj(new Student("Grzegorz","Lenks",3),"db");
+        po2.dodaj(new Student("Kacper","Jasiuczenia",1),"dst");
+        po2.dodaj(new Student("Kacper","Jasiuczenia",2),"ndst");
         po2.wypisz();
         po2.usun(3);
         po2.zmien(2,"dst+");
