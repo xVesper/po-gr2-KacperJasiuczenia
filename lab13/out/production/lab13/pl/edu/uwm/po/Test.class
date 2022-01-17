@@ -1,0 +1,30 @@
+package pl.edu.uwm.po.lab_13;
+
+import java.io.FileNotFoundException;
+
+public class Test {
+    public Test() {
+    }
+
+    public static void main(String[] args) throws FileNotFoundException {
+        Egzamin po = new Egzamin();
+        po.dodaj("Grzegorz", "db");
+        po.dodaj("Tomasz", "dbd");
+        po.dodaj("Slaby", "dst");
+        po.dodaj("Fons", "db+");
+        po.wypisz();
+        po.usun("Slaby");
+        po.zmien("Fons", "dst+");
+        po.wypisz();
+        Egzamin2 po2 = new Egzamin2();
+        po2.dodaj(new Student("Grzegorz", "Kowalski", 4), "bdb");
+        po2.dodaj(new Student("Tomasz", "Karkulowski", 3), "db");
+        po2.dodaj(new Student("Grzegorz", "Kowalski", 1), "dst");
+        po2.dodaj(new Student("Grzegorz", "Kowalski", 2), "ndst");
+        po2.wypisz();
+        po2.usun(3);
+        po2.zmien(2, "dst+");
+        po2.wypisz();
+        new FunMieszajaca("alice30.txt");
+    }
+}
